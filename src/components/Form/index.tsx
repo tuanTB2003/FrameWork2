@@ -17,17 +17,15 @@ const Form = ({ onAdd }: FormProps) => {
             id: Math.floor(Math.random() * 1000) + 1,
             name: inputValue,
         });
-        // Reset State ve trang thai ban dau
         setInputValue("");
-        // Reset form
-        // e.target.reset();    
+       
     };
     const onHanleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setInputValue(e.target.value);
     };
     return (
         <form onSubmit={onHandleSubmit} className="flex justify-between items-center py-2">
-            <Input onChange={onHanleChange} />
+            <Input placeholder="Car Name" onChange={onHanleChange} />
             <Button shape="round" type="primary" icon={<BsPlus className="text-2xl" />} />
         </form>
     );

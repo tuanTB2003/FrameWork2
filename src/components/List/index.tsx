@@ -1,3 +1,4 @@
+import React from "react";
 import { Item } from "..";
 import { ICar } from "@/interfaces/car";
 

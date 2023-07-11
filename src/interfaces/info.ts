@@ -1,4 +1,4 @@
-export interface IInfo{
-    id ?: number,
-    name: string
+export interface IInfo {
+    name: string;
+    children: { id?: number; name: string; age: number }[];
 }

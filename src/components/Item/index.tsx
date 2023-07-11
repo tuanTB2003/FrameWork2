@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { ICar } from "@/interfaces/car";
 import { Button } from "..";
 import styles from "./Item.module.css";
