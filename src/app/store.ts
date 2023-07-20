@@ -1,27 +1,15 @@
-import { legacy_createStore as createStore } from 'redux'
+import { legacy_createStore as createStore, combineReducers } from 'redux';
+import { counterReducer } from '@/reducers/Counter';
+import { productReducer } from '@/reducers/Product';
 
+const rootReducer = combineReducers({
+    counter: counterReducer,
+    products: productReducer
+})
 
-const initialState = {
-    count: 10,
-};
-const reducer = (state = initialState, action: any) => {
-    switch (action.type) {
-        case "INCREMENT":
-            return {
-                count: state.count + 1,
-            };
-        case "DECREMENT":
-            return {
-                count: state.count - 1,
-            };
-        case "INCREASE":
-            return {
-                count: state.count + action.payload,
-            };
-        default:
-            return state;
-    }
-};
-
-const store = createStore(reducer);
+const store = createStore(rootReducer);
 export default store;
+
+
+// state => store(reducer) => state  = {count: 0}
+// state => store(reducer) => state = { counter: { count: 0}, products: xxxx} => 

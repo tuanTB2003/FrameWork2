@@ -1,10 +1,9 @@
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
 import "./index.css";
-import store from "./app/store.ts";
-// import { ProductProvider } from "./context/Product.tsx";
-// import CounterProvider from "./context/Counter.tsx";
 import { Provider } from "react-redux";
+import store from "./app/store";
+import App from "./App";
+
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     // <ProductProvider>
     //     <CounterProvider>
@@ -12,6 +11,6 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     //     </CounterProvider>
     // </ProductProvider>
     <Provider store={store}>
-        <App></App>
+        <App />
     </Provider>
 );
