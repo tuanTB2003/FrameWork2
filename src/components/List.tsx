@@ -27,7 +27,7 @@ const List = () => {
                     </div>
                 );
             })}
-            {/* <button
+            <button
                 className="border bg-blue-500 p-2"
                 onClick={() => dispatch(addProduct({ name: "test" }))}
             >
@@ -41,7 +41,7 @@ const List = () => {
             </button>
             <button className="border bg-blue-500 p-2" onClick={() => dispatch(deleteProduct(3))}>
                 Delete Product
-            </button> */}
+            </button>
         </div>
     );
 };
